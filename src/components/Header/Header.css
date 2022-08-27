@@ -1,20 +1,19 @@
 .header{
-    text-align: center;
+    height: 80px;
+    background-color: #1C2B35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
 }
-.logo{
-    height: 50px;
-}
-.header nav {
-    background-color: black;
-    line-height: 40px;
-}
-.header nav a{
+
+.header a{
+    color: #FFFFFF;
     text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    padding: 5px;
-    font-size: 20px;
+    font-size: 17px;
+    margin-left: 36px;
 }
-.header nav a:hover{
-    background-color: lightgray;
+.header a:hover{
+    color: orange;
 }

@@ -1,27 +1,35 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
-import logo from '../../images/logo.png';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import auth from '../../Firebase/firebase.initialize';
+import logo from '../../images/Logo.svg';
 import './Header.css';
 
-
 const Header = () => {
-    const {user, logOut} = useAuth();
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () =>{
+        signOut(auth);
+    }
+
     return (
-        <div className="header">
-            <img className="logo" src={logo} alt="" />
-            <nav>
-                <NavLink to="/shop">Shop</NavLink>
-                <NavLink to="/review">Order Review</NavLink>
-                <NavLink to="/inventory">Manage Inventory</NavLink>
-                { user.email && <span style={{color: "white"}}>Hi, {user.displayName}</span>}
+        <nav className='header'>
+            <img src={logo} alt="" />
+            <div>
+                <Link to="/shop">Shop</Link>
+                <Link to="/review">Orders Review</Link>
+                <Link to="/inventory">Inventory</Link>
+                <Link to="/about">About</Link>
+                {user && <span style={{color: 'white'}}>Hi, {user.displayName}</span>}
                 {
-                    user.email ? <NavLink onClick={logOut} to="/login">LogOut</NavLink> : <NavLink to="/login">Login</NavLink>
-                }
+                    user ?
+                    <button onClick={handleSignOut}>Sign out</button>
+                    :
+                    <Link to="/login">Login</Link>}
                 
-                
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 };
 
