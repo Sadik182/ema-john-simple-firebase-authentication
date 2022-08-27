@@ -14,7 +14,7 @@ const Header = () => {
                 <NavLink to="/shop">Shop</NavLink>
                 <NavLink to="/review">Order Review</NavLink>
                 <NavLink to="/inventory">Manage Inventory</NavLink>
-                { user.email && <span style={{color: "white"}}>Hello, {user.displayName}</span>}
+                { user.email && <span style={{color: "white"}}>Hi, {user.displayName}</span>}
                 {
                     user.email ? <NavLink onClick={logOut} to="/login">LogOut</NavLink> : <NavLink to="/login">Login</NavLink>
                 }

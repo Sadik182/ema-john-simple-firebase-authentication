@@ -1,5 +1,49 @@
-.login-form {
+.form-container {
 display: flex;
 align-items: center;
 justify-content: center;
+width: 500px;
+border: 1px solid black;
+margin: 20px auto;
+padding: 20px;
+border-radius: 5px;
+}
+.form-title {
+    font-size: 40px;
+    color: #2A414F;
+    font-weight: 500;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    font-size: 20px;
+}
+.input-group input {
+    width: 415px;
+    height: 55px;
+    font-size: 20px;
+    border: 1px solid #95A0A7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.submit-button {
+    width: 415px;
+    height: 55px;
+    background-color: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: rgba(255, 153, 0, 0.8);
+}
+
+.form-link {
+    color: #FF9900;
+    text-decoration: none;
 }
