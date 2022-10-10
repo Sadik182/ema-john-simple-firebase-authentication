@@ -21,10 +21,10 @@ const Header = () => {
                 <Link to="/review">Orders Review</Link>
                 <Link to="/inventory">Inventory</Link>
                 <Link to="/about">About</Link>
-                {user && <span style={{color: 'white'}}>Hi, {user.displayName}</span>}
+                {user && <span style={{color: 'white', marginLeft: '10px'}}>  Hi, {user.displayName}</span>}
                 {
                     user ?
-                    <button onClick={handleSignOut}>Sign out</button>
+                    <Link to="/" onClick={handleSignOut}>Sign out</Link>
                     :
                     <Link to="/login">Login</Link>}
                 

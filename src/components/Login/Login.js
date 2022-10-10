@@ -51,7 +51,7 @@ const Login = () => {
                 </form>
                 <p>New to Ema-John? <Link to="/register" className='form-link'>Create an Account</Link></p>
                 <div>-----------OR-------------</div>
-                <button onClick={handleGoogleLogin}  className="btn-regular">Google Sign In</button>
+                <button onClick={handleGoogleLogin} size="lg" className="btn-regular">Google Sign In</button>
              </div>
         </div>
     );
